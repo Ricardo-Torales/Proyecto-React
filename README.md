@@ -15,3 +15,18 @@ Este es un proyecto de tienda online desarrollado con **React**, que incluye fun
 - Botón para seguir comprando
 
 ## 📁 Estructura de carpetas
+src/
+├── App.jsx
+├── main.jsx
+├── context/
+│ └── CartContext.jsx
+├── components/
+│ ├── Navbar.jsx
+│ ├── Cart.jsx
+│ ├── ProductCard.jsx
+│ └── ProductList.jsx
+├── pages/
+│ ├── Home.jsx
+│ ├── Login.jsx
+│ ├── Checkout.jsx
+│ └── CartCheckout.jsx
