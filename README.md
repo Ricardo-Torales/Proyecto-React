@@ -84,7 +84,7 @@ npm init -y
 npm install json-server --save-dev
 ```
 
-5. **Crear o verificar `db.json` en la raíz del proyecto**
+5. **La `db.json` en la raíz del proyecto**
 
 ```json
 {
@@ -94,7 +94,7 @@ npm install json-server --save-dev
 }
 ```
 
-6. **Correr el servidor JSON en otro terminal**
+6. **Correr el servidor JSON en otra terminal**
 
 ```bash
 npx json-server --watch db.json --port 3001
@@ -122,8 +122,7 @@ npm run dev
   "role": "admin"
 }
 ```
-
----
 ## 📄 Licencia
 
+```
 Este proyecto es de uso libre para fines educativos.
