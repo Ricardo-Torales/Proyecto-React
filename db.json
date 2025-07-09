@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@mail.com",
+      "password": "Admin",
+      "role": "admin"
+    },
+    {
+      "id": "592c",
+      "name": "Ricardo",
+      "email": "rtoraleschamorro@gmail.com",
+      "password": "01020304",
+      "role": "user"
+    }
+  ],
+  "products": [
+    {
+      "id": "d996",
+      "name": "Camisa Manga Larga",
+      "description": "Camisa manga larga talles varios del 38 al 54",
+      "price": 15,
+      "stock": 99
+    },
+    {
+      "id": "c7ac",
+      "name": "Pantalón de Vestir",
+      "description": "Pantalón de vestir de gabardina, talles varios del 38 al 60, colores negro, verde, azul, beige",
+      "price": 25,
+      "stock": 90
+    }
+  ],
+  "cart": []
+}

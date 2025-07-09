@@ -1,4 +1,3 @@
-// src/App.jsx
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -7,23 +6,28 @@ import Login from './pages/Login';
 import CocktailList from './pages/CocktailList';
 import CartCheckout from './pages/CartCheckout';
 import Checkout from './pages/Checkout';
-import { useState } from 'react';
+import Register from './pages/Register';
+import AdminPanel from './pages/AdminPanel';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [user, setUser] = useState('');
+  const [products, setProducts] = useState([]);
 
-  const products = [
-    { id: 1, name: 'Remera', price: 3500 },
-    { id: 2, name: 'Pantalón', price: 8500 },
-    { id: 3, name: 'Zapatillas', price: 15000 }
-  ];
+  useEffect(() => {
+    fetch('http://localhost:3001/products')
+      .then(res => res.json())
+      .then(data => setProducts(data));
+  }, []);
 
   return (
     <>
-      <Navbar user={user} />
+      <Navbar user={user} setUser={setUser} />
       <Routes>
         <Route path="/" element={<Home products={products} />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/admin" element={<AdminPanel />} />
         <Route path="/cocktails" element={<CocktailList />} />
         <Route path="/cartCheckout" element={<CartCheckout />} />
         <Route path="/checkout" element={<Checkout />} />
