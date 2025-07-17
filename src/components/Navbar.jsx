@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = ({ user, setUser }) => {
   const isAdmin = user === "Admin";
+  const navigate = useNavigate(); // 👈 hook para redireccionar
 
   const handleLogout = () => {
     setUser("");
+    navigate("/"); // 👈 redirige al inicio
   };
 
   return (
