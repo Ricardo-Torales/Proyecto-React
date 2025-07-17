@@ -10,7 +10,7 @@
     {
       "id": "592c",
       "name": "Ricardo",
-      "email": "rtoraleschamorro@gmail.com",
+      "email": "rtorales@gmail.com",
       "password": "01020304",
       "role": "user"
     }
@@ -18,17 +18,157 @@
   "products": [
     {
       "id": "d996",
-      "name": "Camisa Manga Larga",
-      "description": "Camisa manga larga talles varios del 38 al 54",
+      "name": "Camisa Manga Larga hombre",
+      "description": "Camisa manga larga hombre talles varios del 38 al 54",
       "price": 15,
       "stock": 99
     },
     {
       "id": "c7ac",
-      "name": "Pantalón de Vestir",
-      "description": "Pantalón de vestir de gabardina, talles varios del 38 al 60, colores negro, verde, azul, beige",
+      "name": "Pantalón de Vestir hombre",
+      "description": "Pantalón de vestir de gabardina hombre, talles varios del 38 al 60, colores negro, verde, azul, beige",
       "price": 25,
       "stock": 90
+    },
+    {
+      "id": "a1b2",
+      "name": "Camisa Oxford Hombre",
+      "description": "Camisa de algodón oxford manga larga, cuello clásico. Colores: blanco, azul, lila. Talles S a XXL",
+      "price": 32.99,
+      "stock": 45
+    },
+    {
+      "id": "b3c4",
+      "name": "Zapatillas Running",
+      "description": "Zapatillas deportivas para running con amortiguación Air. Talles 38 al 46. Color: negro/rojo",
+      "price": 89.99,
+      "stock": 30
+    },
+    {
+      "id": "d5e6",
+      "name": "Vestido Midi Mujer",
+      "description": "Vestido midi de algodón con estampado floral. Talles XS a XL. Colores: rosa, azul pastel",
+      "price": 45.5,
+      "stock": 25
+    },
+    {
+      "id": "f7g8",
+      "name": "Chaqueta Denim",
+      "description": "Chaqueta de denim lavado con bolsillos frontales. Talles S a XXL. Color: azul claro/oscuro",
+      "price": 65,
+      "stock": 40
+    },
+    {
+      "id": "h9i0",
+      "name": "Sudadera con Capucha",
+      "description": "Sudadera oversize de felpa con capucha. Talles unisex S a XXL. Color: gris, negro",
+      "price": 39.99,
+      "stock": 55
+    },
+    {
+      "id": "j1k2",
+      "name": "Cinturón de Cuero",
+      "description": "Cinturón de cuero genuino hebilla metálica. Anchos: 3cm y 4cm. Colores: marrón, negro",
+      "price": 22.5,
+      "stock": 80
+    },
+    {
+      "id": "l3m4",
+      "name": "Falda Lápiz Mujer",
+      "description": "Falda lápiz de tejido elástico para oficina. Talles 38 al 46. Color: negro, beige, azul marino",
+      "price": 34.99,
+      "stock": 35
+    },
+    {
+      "id": "n5o6",
+      "name": "Polo Clásico Hombre",
+      "description": "Polo de piqué de algodón con logo bordado. Talles S a XXL. Color: blanco, negro, azul",
+      "price": 28,
+      "stock": 60
+    },
+    {
+      "id": "p7q8",
+      "name": "Botines Mujer",
+      "description": "Botines de cuero sintético con tacón bloque 4cm. Talles 35 al 40. Color: negro, camel",
+      "price": 59.9,
+      "stock": 22
+    },
+    {
+      "id": "r9s0",
+      "name": "Gorra Ajustable",
+      "description": "Gorra plana de algodón con ajuste trasero. Color: negra, blanca, roja. Unisex",
+      "price": 15.99,
+      "stock": 100
+    },
+    {
+      "id": "t1u2",
+      "name": "Jeans Skinny Mujer",
+      "description": "Jeans skinny alto elastizado con roturas. Talles 38 al 46. Color: azul claro, oscuro",
+      "price": 49.95,
+      "stock": 28
+    },
+    {
+      "id": "v3w4",
+      "name": "Chaleco Térmico",
+      "description": "Chaleco acolchado térmico para invierno. Talles S a XXL. Color: negro, gris, azul",
+      "price": 55,
+      "stock": 18
+    },
+    {
+      "id": "x5y6",
+      "name": "Zapatos Formales Hombre",
+      "description": "Zapatos de vestir en piel con suela de goma. Talles 39 al 45. Color: negro, marrón",
+      "price": 79.99,
+      "stock": 15
+    },
+    {
+      "id": "z7a8",
+      "name": "Top Deportivo Mujer",
+      "description": "Top deportivo de secado rápido con soporte. Talles XS a XL. Color: negro, rosa, azul",
+      "price": 26.5,
+      "stock": 42
+    },
+    {
+      "id": "b9c0",
+      "name": "Shorts Hombre",
+      "description": "Shorts de baño quick-dry con bolsillos. Talles S a XXL. Color: azul, negro, verde",
+      "price": 31.99,
+      "stock": 37
+    },
+    {
+      "id": "d1e2",
+      "name": "Blazer Mujer",
+      "description": "Blazer slim fit de mezcla de lana. Talles 38 al 46. Color: negro, gris, azul marino",
+      "price": 89.95,
+      "stock": 12
+    },
+    {
+      "id": "f3g4",
+      "name": "Bufanda de Lana",
+      "description": "Bufanda tejida en lana merino. Dimensiones: 180cm x 25cm. Color: gris, beige, rojo",
+      "price": 29,
+      "stock": 65
+    },
+    {
+      "id": "h5i6",
+      "name": "Mochila Urbana",
+      "description": "Mochila resistente al agua con compartimento laptop. Color: negro, azul, verde militar",
+      "price": 47.5,
+      "stock": 23
+    },
+    {
+      "id": "j7k8",
+      "name": "Pijama Unisex",
+      "description": "Conjunto pijama algodón 100%. Talles S a XXL. Estampado: rayas, cuadros, liso",
+      "price": 36.75,
+      "stock": 31
+    },
+    {
+      "id": "l9m0",
+      "name": "Gafas de Sol",
+      "description": "Gafas de sol polarizadas UV400. Modelo: aviador, redondo, rectangular. Color: negro, dorado",
+      "price": 42.99,
+      "stock": 50
     }
   ],
   "cart": []
