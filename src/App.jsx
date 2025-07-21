@@ -9,6 +9,9 @@ import Checkout from './pages/Checkout';
 import Register from './pages/Register';
 import AdminPanel from './pages/AdminPanel';
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet'; // SEO
+import { ToastContainer, toast } from 'react-toastify'; // Notificaciones
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [user, setUser] = useState('');
@@ -16,13 +19,23 @@ function App() {
 
   useEffect(() => {
     fetch('http://localhost:3001/products')
-      .then(res => res.json())
-      .then(data => setProducts(data));
+      .then(res => {
+        if (!res.ok) throw new Error('Error al obtener productos');
+        return res.json();
+      })
+      .then(data => setProducts(data))
+      .catch(() => toast.error("Error al cargar productos de la tienda"));
   }, []);
 
   return (
     <>
+      <Helmet>
+        <title>La Economía - Tienda React</title>
+        <meta name="description" content="Compra productos y cócteles en línea con nuestra tienda React" />
+      </Helmet>
+
       <Navbar user={user} setUser={setUser} />
+
       <Routes>
         <Route path="/" element={<Home products={products} />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
@@ -32,6 +45,17 @@ function App() {
         <Route path="/cartCheckout" element={<CartCheckout />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
+
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }

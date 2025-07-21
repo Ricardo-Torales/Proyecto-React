@@ -23,6 +23,13 @@ Este es un proyecto de tienda online desarrollado con **React**, que incluye:
 
 ---
 
+## 🧩 Integraciones UI y UX
+
+- **React Icons:** Se incorporaron íconos intuitivos para mejorar la usabilidad y apariencia de la interfaz.
+- **React Toastify:** Se implementaron notificaciones de éxito y error para mejorar la experiencia del usuario.
+- **React Helmet:** Se agregaron etiquetas `<title>` y `<meta>` dinámicas para mejorar el SEO.
+- **Accesibilidad:** Se incorporaron atributos ARIA en botones e inputs para compatibilidad con lectores de pantalla.
+
 ## 📁 Estructura del proyecto
 
 ```

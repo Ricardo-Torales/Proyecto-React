@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { FaTrash, FaEdit, FaSave, FaPlus } from 'react-icons/fa';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UserManager = () => {
   const [users, setUsers] = useState([]);
@@ -14,7 +17,8 @@ const UserManager = () => {
   useEffect(() => {
     fetch('http://localhost:3001/users')
       .then(res => res.json())
-      .then(data => setUsers(data));
+      .then(data => setUsers(data))
+      .catch(() => toast.error("Error al cargar los usuarios"));
   }, []);
 
   const validateUser = (user) => {
@@ -28,6 +32,7 @@ const UserManager = () => {
     const validationError = validateUser(newUser);
     if (validationError) {
       setError(validationError);
+      toast.error(validationError);
       return;
     }
 
@@ -41,12 +46,17 @@ const UserManager = () => {
       setUsers([...users, user]);
       setNewUser({ name: '', email: '', password: '', role: 'user' });
       setError('');
-    });
+      toast.success("Usuario agregado");
+    }).catch(() => toast.error("Error al agregar usuario"));
   };
 
   const handleDelete = (id) => {
     fetch(`http://localhost:3001/users/${id}`, { method: 'DELETE' })
-      .then(() => setUsers(users.filter(u => u.id !== id)));
+      .then(() => {
+        setUsers(users.filter(u => u.id !== id));
+        toast.info("Usuario eliminado");
+      })
+      .catch(() => toast.error("Error al eliminar usuario"));
   };
 
   const handleEdit = (user) => {
@@ -57,6 +67,7 @@ const UserManager = () => {
     const validationError = validateUser(editUser);
     if (validationError) {
       setError(validationError);
+      toast.error(validationError);
       return;
     }
 
@@ -68,7 +79,8 @@ const UserManager = () => {
       setUsers(users.map(u => (u.id === editUser.id ? editUser : u)));
       setEditUser(null);
       setError('');
-    });
+      toast.success("Usuario actualizado");
+    }).catch(() => toast.error("Error al guardar cambios"));
   };
 
   return (
@@ -99,8 +111,9 @@ const UserManager = () => {
         <option value="admin">Administrador</option>
       </select>
 
-      <button onClick={handleAddUser}>Agregar</button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      <button onClick={handleAddUser} title="Agregar usuario">
+        <FaPlus /> Agregar
+      </button>
 
       <h3>👥 Usuarios existentes</h3>
       {users.map(u => (
@@ -127,8 +140,9 @@ const UserManager = () => {
                 <option value="user">Usuario</option>
                 <option value="admin">Administrador</option>
               </select>
-              <button onClick={handleSave}>Guardar</button>
-              {error && <p style={{ color: 'red' }}>{error}</p>}
+              <button onClick={handleSave} title="Guardar cambios">
+                <FaSave /> Guardar
+              </button>
             </>
           ) : (
             <>
@@ -136,8 +150,12 @@ const UserManager = () => {
               <br />
               Contraseña: {u.password}
               <br />
-              <button onClick={() => handleEdit(u)}>Editar</button>
-              <button onClick={() => handleDelete(u.id)}>Eliminar</button>
+              <button onClick={() => handleEdit(u)} title="Editar usuario">
+                <FaEdit />
+              </button>
+              <button onClick={() => handleDelete(u.id)} title="Eliminar usuario">
+                <FaTrash />
+              </button>
             </>
           )}
         </div>
