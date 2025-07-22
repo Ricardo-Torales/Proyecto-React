@@ -9,8 +9,8 @@ import Checkout from './pages/Checkout';
 import Register from './pages/Register';
 import AdminPanel from './pages/AdminPanel';
 import { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet'; // SEO
-import { ToastContainer, toast } from 'react-toastify'; // Notificaciones
+import { Helmet } from 'react-helmet';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {

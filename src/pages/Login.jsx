@@ -1,4 +1,3 @@
-// src/pages/Login.jsx
 import LoginForm from '../components/LoginForm';
 
 const Login = ({ setUser }) => {

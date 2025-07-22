@@ -26,7 +26,7 @@ const Navbar = ({ user, setUser }) => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
       if (window.innerWidth >= 768) {
-        setIsMenuOpen(false); // cierra el menú en desktop
+        setIsMenuOpen(false);
       }
     };
 
@@ -79,7 +79,7 @@ const styles = {
   nav: {
     position: 'fixed',
     top: 0,
-    left: 0, // ✅ Corrige desplazamiento
+    left: 0,
     width: '100%',
     backgroundColor: '#2A3F54',
     padding: '1rem',
